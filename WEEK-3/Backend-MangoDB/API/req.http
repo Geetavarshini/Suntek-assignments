@@ -1,0 +1,58 @@
+###mRead all Users
+GET http://localhost:4000/user-api/users
+
+###read User by ID
+GET http://localhost:4000/user-api/users/697dbe1ee4498149f90568c7
+
+  ###Create a new User
+  POST http://localhost:4000/user-api/users
+  Content-Type: application/json
+
+  {
+    "username": "Spurthi",
+    "password": "password123",
+    "age": 69
+  }
+
+###Update User by ID
+PUT http://localhost:4000/user-api/users/697dbe1ee4498149f90568c7
+Content-Type: application/json
+
+{
+  "username": "SpurthiUpdated",
+  "password": "newpassword123",
+  "age": 70
+}   
+
+###delete User by ID
+DELETE http://localhost:4000/user-api/users/697dbe1ee4498149f90568c7
+
+
+### Read all producs 
+GET http://localhost:4000/product-api/products
+
+### Read product by ID
+GET http://localhost:4000/product-api/products/697dbc8b78b26d08a63a13d9
+
+### Create a new product
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+  "pid": "1001",
+  "productname": "Laptop",
+  "price": "1200"
+}
+
+###Update Product by ID
+PUT http://localhost:4000/product-api/products/697dbc8b78b26d08a63a13d9
+Content-Type: application/json
+
+{
+  "pid": "1001",
+  "productname": "Laptop Pro",
+  "price": "1500"
+}   
+
+###delete Product by ID
+DELETE http://localhost:4000/product-api/products/697dbc8b78b26d08a63a13d9
