@@ -1,5 +1,6 @@
 import exp from 'express';  
 import {userApp} from './API/userAPI.js'
+import {productApp} from './API/productAPI.js'
 import { connect } from 'mongoose';
 const app = exp();
 //Assign port number
