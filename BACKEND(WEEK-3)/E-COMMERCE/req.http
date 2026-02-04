@@ -1,0 +1,55 @@
+###Create product
+POST http://localhost:5000/product-api/products
+Content-Type: application/json
+
+{
+    "productName": "Samgung Galaxy S21",
+    "price": 150000,
+    "brand": "samsung"
+    
+}
+
+###Get all products
+GET http://localhost:5000/product-api/products
+
+###Create User
+POST http://localhost:5000/user-api/users
+Content-Type: application/json
+
+{
+    "name": "rocks",
+    "email": "rocks@example.com",
+    "password": "rocks@123",
+    "cart": []
+}
+
+###User authentication (login)
+POST http://localhost:5000/user-api/auth
+Content-Type: application/json
+
+{
+  "username": "rocks",
+  "password": "rocks@123"
+} 
+
+###update user by id
+PUT http://localhost:5000/user-api/users/69819743690b281ea6e97deb
+Content-Type: application/json
+
+{
+    "name": "rocks updated",
+    "email": "rocks.updated@example.com",
+    "password": "rocks@1234"
+}
+
+###delete user by id
+DELETE http://localhost:5000/user-api/users/698074a3a0fb717efd3fef3a
+
+###Req to add product to cart
+PUT http://localhost:5000/user-api/user-cart/userid/69819743690b281ea6e97deb/productid/69806c908bd07a57a471510d
+
+###Read user by ID
+GET http://localhost:5000/user-api/users/69819743690b281ea6e97deb
+
+###Request for protected route
+GET http://localhost:5000/user-api/test
